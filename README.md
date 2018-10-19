@@ -2,7 +2,7 @@
 
 [![build status](https://travis-ci.org/fortes/rateyourmusic.svg?branch=master)](https://travis-ci.org/fortes/rateyourmusic) [![PyPI version](https://badge.fury.io/py/rateyourmusic.svg)](https://badge.fury.io/py/rateyourmusic)
 
-An unofficial scraper [RateYourMusic](https://rateyourmusic.com) reviews.
+Metadata scraper [RateYourMusic](https://rateyourmusic.com) reviews.
 
 ## Installation
 
@@ -21,8 +21,6 @@ pip install git+git://github.com/fortes/rateyourmusic.git@master
 ```
 >>> import rateyourmusic
 >>> review = rateyourmusic.getAlbumReviewForRateYourMusicUrl('https://rateyourmusic.com/release/album/edan/beauty_and_the_beat/')
->>> print(review.album)
-'Beauty and the Beat'
 >>> print(review.rating)
 3.72
 ```
@@ -34,6 +32,12 @@ There is one test, you can try it:
 ```bash
 python -m unittest
 ```
+
+## Warnings
+
+* This was a quick hack for a small project, it may or may not work for you
+* Not all sites like having scrapers, use at your own risk
+* RateYourMusic will hopefully add an API some day and this will all be wasted effort
 
 ## License
 
