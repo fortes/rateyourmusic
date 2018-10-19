@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.6'
+install:
+- python setup.py install
+- pip install -r requirements.txt
+script: python -m unittest
+deploy:
+  provider: pypi
+  user: fortes
+  password:
+    secure: NG3IfSVasg4vCdnoIOGCeKAjFL3t+wQdDOCYhiofjPrdYGj/MMypSxd0WmCxKs1hF5TggRicRegWnNSWRS30RJgELFLekDEYWnxnPbCgsJVe4nB6+MBxY3w3z9v/tTcgPyqeY/vuAP4KOc3JrZjYiyUlt48b1KJNEPVKtQ/212jTnNf1sK5hIeuct8OvXQlk4N8S66ekRgPdZtQDin6lR95rIP+fT4NVgP+Mq8eDfiubk49FZHq0Z4rZWfymCnkJ3mMEI7njfkBTQUQQK8VbKuMPq3DZn1sgCD1aa/UxKmz8at9y9PSVB9f1Bjf5QwVT/NLFFBOfJjI+4kvd4gMLO0TezvxzBhlbnyEbv9n7tkIl1RJA+6FpNs+s1Ckv0njisKkc5YED18wFbQ82rRleB2uW+dCC/W8Z2EHiq4s9xsC5tnZIvf6xDcQRNTbvgDGDBYGgt1V6MlyL3ODI3QdhMxRQCON8OXaaa3lfEaXgNCLhI+Z1fj0VurTO7/CYrPgU5ZQC0fjMW5WeHAidaXtHeOLAEcngerOW7/GRlyJjQjZUuaOmgxlpd4v2fnYv3ltl3BLqv3PUUE7lZvdF///esq9YpnYC9zopqy5WcTBJFYEBiZQTJdJYgfT0yU1TRyo2N5l9ToVA6VjbGYI2ibvKwNAIZ1/+F7BLD+CJxYD3L0E=
+  on:
+    tags: true
