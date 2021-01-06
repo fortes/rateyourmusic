@@ -1,4 +1,4 @@
-extruct==0.7.3
+extruct==0.12.0
 rdflib==4.2.2
 rdflib-jsonld==0.4.0
 requests==2.22.0
