@@ -21,7 +21,7 @@ pip install git+git://github.com/fortes/rateyourmusic.git@master
 ```
 >>> import rateyourmusic
 >>> review = rateyourmusic.getAlbumReviewForRateYourMusicUrl('https://rateyourmusic.com/release/album/edan/beauty_and_the_beat/')
->>> print(review.rating)
+>>> print(review.average_rating)
 3.72
 ```
 
@@ -37,7 +37,7 @@ python -m unittest
 
 * This was a quick hack for a small project, it may or may not work for you
 * Not all sites like having scrapers, use at your own risk
-* RateYourMusic will hopefully add an API some day and this will all be wasted effort
+* RateYourMusic/Sonemic is taking forever to create an API so this is the next best thing
 
 ## License
 
