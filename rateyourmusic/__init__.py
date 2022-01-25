@@ -7,6 +7,7 @@ import pprint
 SCHEMA_AGGREGATE_RATING_URL = "http://schema.org/AggregateRating"
 SCHEMA_MUSIC_ALBUM_URL = "http://schema.org/MusicAlbum"
 SCHEMA_MUSIC_GROUP_URL = "http://schema.org/MusicGroup"
+SCHEMA_MUSIC_RECORDING = "http://schema.org/MusicRecording"
 
 RYM_URL_MATCHER = re.compile(
     'https?://rateyourmusic.com/release/album/[^/]+/[^/]+')
@@ -21,6 +22,9 @@ class AlbumReview:
     - name
     - average_rating
     - num_ratings
+    - genres
+    - numtracks
+    - tracklist
     """
 
     def __init__(self, microdata):
@@ -55,6 +59,23 @@ class AlbumReview:
                             rating_properties.get('ratingValue'))
                         self.num_ratings = int(
                             rating_properties.get('ratingCount'))
+
+                
+                genre = properties.get('genre')
+                if genre:
+                    self.genre = genre
+
+                numtracks = properties.get('numTracks')
+                if numtracks:
+                    self.numtracks = numtracks
+                
+                tracks = properties.get('track')
+                if tracks:
+                    self.tracklist = []
+                    for track in tracks:
+                        if track.get('type') == SCHEMA_MUSIC_RECORDING:
+                            track_properties = track.get("properties")
+                            self.tracklist.append(track_properties.get("name"))                   
 
 
 def isValidRateYourMusicURL(url):
