@@ -17,7 +17,7 @@ pip install rateyourmusic
 Alternatively, clone directly from `master` to run with the freshest bugs:
 
 ```sh
-pip install git+git://github.com/fortes/rateyourmusic.git@master
+pip install git+https://github.com/fortes/rateyourmusic.git@master
 ```
 
 ## Usage
