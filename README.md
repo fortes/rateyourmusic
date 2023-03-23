@@ -1,3 +1,7 @@
+# No longer maintained
+
+This is no longer maintained, code is archived and available for forking though.
+
 # RateYourMusic
 
 [![build status](https://travis-ci.org/fortes/rateyourmusic.svg?branch=master)](https://travis-ci.org/fortes/rateyourmusic) [![PyPI version](https://badge.fury.io/py/rateyourmusic.svg)](https://badge.fury.io/py/rateyourmusic)
